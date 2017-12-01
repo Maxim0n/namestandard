@@ -36,7 +36,7 @@ public static void Run(BrokeredMessage myMessage, CloudTable Orders, TraceWriter
             myMessage.Abandon();
         }
         else {
-            // Call name generator and pass to AddNewResource with generated name
+            // TODO: Call name generator and pass to AddNewResource with generated name
             log.Info($"{order.PartitionKey} : {order.RowKey} : {order.approver} : {order.status}");
         }
     }
