@@ -47,7 +47,6 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, CloudT
                 error = "Returned null value";
             }
             else {
-                // Call name generator and pass to AddNewResource with generated name
                 myObj = new {Info = "Successfull", Requester = Requester, GUID = GUID, Status = order.status};
                 log.Info($"{order.PartitionKey} : {order.RowKey} : {order.status}");
             }
