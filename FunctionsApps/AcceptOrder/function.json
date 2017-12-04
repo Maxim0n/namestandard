@@ -1,0 +1,30 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "name": "req",
+      "type": "httpTrigger",
+      "direction": "in"
+    },
+    {
+      "type": "table",
+      "name": "Orders",
+      "tableName": "ordersdb",
+      "connection": "AzureWebJobsStorage",
+      "direction": "in"
+    },
+    {
+      "type": "table",
+      "name": "OrdersOUT",
+      "tableName": "ordersdb",
+      "connection": "AzureWebJobsStorage",
+      "direction": "out"
+    },
+    {
+      "name": "$return",
+      "type": "http",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
