@@ -1,0 +1,31 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "name": "req",
+      "requester": "req",
+      "guid": "req",
+      "customer": "req",
+      "network": "req",
+      "resourcetype": "req",
+      "resourcetypesubtype": "req",
+      "resourcegroup": "req",
+      "approver": "req",
+      "type": "httpTrigger",
+      "direction": "in"
+    },
+    {
+      "name": "$return",
+      "type": "http",
+      "direction": "out"
+    },
+    {
+      "type": "table",
+      "name": "Order",
+      "tableName": "ordersdb",
+      "connection": "AzureWebJobsStorage",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
