@@ -14,10 +14,10 @@ public static void Run(BrokeredMessage myMessage, CloudTable Orders, TraceWriter
     string sRequester = myMessage.Properties["Requester"].ToString();
     string sGUID = myMessage.Properties["GUID"].ToString();
     
-    if (GUID == null) {
+    if (sGUID == null) {
        myMessage.Abandon();
     }
-    if (Requester == null) {
+    if (sRequester == null) {
        myMessage.Abandon();
     }
 
