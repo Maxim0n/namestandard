@@ -71,8 +71,8 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, CloudT
                 operation = TableOperation.Replace(order);
                 result = OrdersOUT.Execute(operation);
                 
-                 // Create Message bus client
-                var connectionString = ""; // TODO: Get ConnectionString from App Settings. Do not use hard coded keys
+                // Create Message bus client
+                var connectionString = System.Environment.GetEnvironmentVariable("namestandard_RootManageSharedAccessKey_SERVICEBUS");
                 var queueName = "namestandard";
                 var client = QueueClient.CreateFromConnectionString(connectionString, queueName);
 
